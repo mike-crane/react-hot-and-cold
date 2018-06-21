@@ -2,7 +2,7 @@
   text-align: center;
   border: 1px solid #000;
   border-radius: 5px;
-  margin: 10px;
+  background: #222;
 }
 
 @keyframes App-logo-spin {

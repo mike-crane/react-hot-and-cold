@@ -5,13 +5,16 @@ import GuessForm from './interface/guess-form';
 import GuessCount from './interface/guess-count';
 import GuessHistory from './interface/guess-history';
 
-export default function Interface() {
+export default function Interface(props) {
+  const { feedback, guesses, guessCount } = props;
   return (
     <div className="interface">
-      <Feedback />
-      <GuessForm />
-      <GuessCount />
-      <GuessHistory />
+      <div className="interface-container">
+        <Feedback feedback={feedback} />
+        <GuessForm onSubmitGuess={guess => props.onSubmitGuess(guess)} />
+        <GuessCount guessCount={guessCount} />
+        <GuessHistory guesses={guesses} />
+      </div>
     </div>
   );
 }

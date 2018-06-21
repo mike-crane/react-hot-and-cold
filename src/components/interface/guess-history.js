@@ -2,11 +2,16 @@ import React from 'react';
 
 import './guess-history.css';
 
-export default function GuessHistory() {
+export default function GuessHistory(props) {
+  const guesses = props.guesses.map((guess, index) => (
+    <li key={index}>
+      {guess}
+    </li>
+  ));
+  
   return (
-    <ul>
-      <li>34</li>
-      <li>45</li>
+    <ul id="guessList" className="guessBox clearfix">
+      {guesses}
     </ul>
   );
 }
