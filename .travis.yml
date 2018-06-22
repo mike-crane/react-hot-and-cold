@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: mQihZLDpht5co4yiuWJLf3g6XSieMj3JioTxTI5iOcNcoMJanwHjKOX1kchqqKSyn18nonZcO74vpjw/lM7W3QiWeuPKNLeR7kG9vO2Tz6jnyQxy5J+ttzb7QFWXoavBiujOdoSclwCPSldeLR21bV9ZGf6szNqkr1Woy2E/3bUWG5ogT+sVyGR0uDUS92qvDHUNvQgj3AD32wRVqzsEwCO4xCztMvvgijBMFEN7QoOroXMJYknf6MrsWFBteXCFBb3kV5RTvJnaiN9XuNhe0xsjFDBcdrTzawQ3Kr3GvZqE9T35NTZK7PAI8ZF5IsCf6643ZuPJL1aLtCxN6gFiDdFDRn8U29b4s5esWFK4vf+/PV43MPSNXDf4Gna1LZVn8gYstalxQwjUpLkPQrHQ1LjRB0TYEYY8XHpzAxYNxnJ7dr8w6ojqLEKyHjlq2JVfLk2idqU3kNSAkyZdCtdEEra3ozGOybulRfjC1bF1Sn77LchkWB6PkYHVP0ysWcTwjjrsUZ5IfqMuzFSp1AY52liApx5Ns/M2wsQO24DJhrn1gEWC+WVASEWqoT3IUCw2yUqoPbQ9JY4dXL6reuu/0mrBQciZq3S+28paG1Q5iNuUH6ro2uLqA95SJSVuZlvbwAGy8ljAUcwkL1aZ/hSE76YsATQ1d7PVLsesF+DIzhw=
+  app: ancient-bayou-65726
+  on:
+    repo: mike-crane/react-hot-and-cold
